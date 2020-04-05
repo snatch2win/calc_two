@@ -13,7 +13,8 @@ public class CalcOne {
         System.out.println("Введите число:");
         double x = in.nextDouble();
 
-
+        System.out.println("Введите число:");
+        double z = in.nextDouble();
 
         do {
 
@@ -41,8 +42,7 @@ public class CalcOne {
             }
             }while (ch == '/' || ch == '*' || ch == '-' || ch == '+');
 
-        System.out.println("Введите число:");
-        double z = in.nextDouble();
+
 
             //double w = z * x;
             //System.out.println(w);
