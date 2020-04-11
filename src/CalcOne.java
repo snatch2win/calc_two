@@ -4,50 +4,47 @@ public class CalcOne {
     public static void main(String[] args)
             throws java.io.IOException {
 
-        //double x,z;
-        double w1, w2, w3, w4;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Это калькулятор");
+        double w;
         char ch;
 
-        Scanner in = new Scanner(System.in);
-
-        System.out.println("Введите число:");
-        double x = in.nextDouble();
-
-        System.out.println("Введите число:");
-        double z = in.nextDouble();
-
         do {
+            System.out.println("Введите число:");
+            double x = scanner.nextDouble();
 
             System.out.println("введите операзию ( / * - + ), и нажмите enter");
             ch = (char) System.in.read();
 
             System.out.println("вы выбрали " + ch);
+
+            System.out.println("Введите число:");
+            double z = scanner.nextDouble();
+
             switch (ch) {
                 case '/':
-                    w1 = x / z;
-                    System.out.println("получилось: " + w1);
-                    return;
+                    w = x / z;
+                    System.out.println("получилось: " + w);
+                    break;
                 case '*':
-                    w2 = z * x;
-                    System.out.println("получилось: " + w2);
-                    return;
+                    w = z * x;
+                    System.out.println("получилось: " + w);
+                    break;
                 case '-':
-                    w3 = x - z;
-                    System.out.println("получилось: " + w3);
-                    return;
+                    w = x - z;
+                    System.out.println("получилось: " + w);
+                    break;
                 case '+':
-                    w4 = x + z;
-                    System.out.println("получилось: " + w4);
-                    return;
+                    w = x + z;
+                    System.out.println("получилось: " + w);
+                    break;
+                default:
+                    System.out.println("Введите операцию вычесления ( /, *, -, + )");
+                    int pi = scanner.nextInt();
             }
-            }while (ch == '/' || ch == '*' || ch == '-' || ch == '+');
+            System.out.println("Продолжить? Yes = 1, No = 0");
+        } while (scanner.nextInt() == 1);
 
-
-
-            //double w = z * x;
-            //System.out.println(w);
-
-        }
-        //while (x < 0) ;
     }
+}
 
